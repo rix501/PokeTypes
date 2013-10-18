@@ -1,0 +1,15 @@
+node_modules
+dist
+app/bower_components
+.tmp
+.sass-cache
+
+.bowerrc
+.editorconfig
+.jshintrc
+.travis.yml
+.buildignore
+
+*.sublime-project
+*.sublime-workspace
+

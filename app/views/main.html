@@ -4,9 +4,8 @@
             id="main-{{thing.name}}" 
             type="radio" 
             name="main" 
-            ng-model="$parent.mainSelected"
-            ng-value="thing" 
-            ng-change="selectMain(thing)"/>
+            ng-model="$parent.main"
+            ng-value="thing" />
         <label for="main-{{thing.name}}">{{thing.name}}</label>
     </div>
 </div>
@@ -15,9 +14,8 @@
         <input 
             id="other-{{thing.name}}" 
             type="radio"             
-            ng-model="$parent.otherSelected"
-            ng-value="thing" 
-            ng-change="selectOther(thing)"/>
+            ng-model="$parent.other"
+            ng-value="thing" />
         <label for="other-{{thing.name}}">{{thing.name}}</label>
     </div>
 </div>

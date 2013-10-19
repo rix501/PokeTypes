@@ -1,24 +1,12 @@
 angular.module('PokeTypes')
 .controller 'MainCtrl', ($scope, Types) ->
-   
-    types = Types.list
-    main = types[0]
-    other = types[0]
 
-    update = -> $scope.result = main.comparator(other)
+    $scope.types = Types.list
+    $scope.main = $scope.types[0]
+    $scope.other = $scope.types[0]
 
-    update()
+    updateResult = ->
+        $scope.result = $scope.main.comparator($scope.other)
 
-    # scope time
-
-    $scope.selectMain = (thing) ->
-        main = thing
-        update()
-
-    $scope.selectOther = (thing) ->
-        other = thing
-        update()
-
-    $scope.types = types
-    $scope.mainSelected = main
-    $scope.otherSelected = main
+    $scope.$watch 'main', updateResult
+    $scope.$watch 'other', updateResult

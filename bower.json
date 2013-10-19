@@ -1,5 +1,5 @@
 {
-  "name": "Code",
+  "name": "PokeTypes",
   "version": "0.0.0",
   "dependencies": {
     "angular": "~1.0.7",

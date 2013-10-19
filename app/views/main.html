@@ -1,9 +1,24 @@
 <div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+    <div ng-repeat="thing in types">
+        <input 
+            id="main-{{thing.name}}" 
+            type="radio" 
+            name="main" 
+            ng-model="$parent.mainSelected"
+            ng-value="thing" 
+            ng-change="selectMain(thing)"/>
+        <label for="main-{{thing.name}}">{{thing.name}}</label>
+    </div>
 </div>
+<div class="hero-unit">
+    <div ng-repeat="thing in types">
+        <input 
+            id="other-{{thing.name}}" 
+            type="radio"             
+            ng-model="$parent.otherSelected"
+            ng-value="thing" 
+            ng-change="selectOther(thing)"/>
+        <label for="other-{{thing.name}}">{{thing.name}}</label>
+    </div>
+</div>
+<div class="vs">{{result}}</div>

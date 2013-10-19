@@ -1,24 +1,24 @@
 <div class="hero-unit">
     <div ng-repeat="thing in types">
         <input 
-            id="main-{{thing.getName()}}" 
+            id="main-{{thing.name}}" 
             type="radio" 
             name="main" 
             ng-model="$parent.mainSelected"
             ng-value="thing" 
             ng-change="selectMain(thing)"/>
-        <label for="main-{{thing.getName()}}">{{thing.getName()}}</label>
+        <label for="main-{{thing.name}}">{{thing.name}}</label>
     </div>
 </div>
 <div class="hero-unit">
     <div ng-repeat="thing in types">
         <input 
-            id="other-{{thing.getName()}}" 
+            id="other-{{thing.name}}" 
             type="radio"             
             ng-model="$parent.otherSelected"
             ng-value="thing" 
             ng-change="selectOther(thing)"/>
-        <label for="other-{{thing.getName()}}">{{thing.getName()}}</label>
+        <label for="other-{{thing.name}}">{{thing.name}}</label>
     </div>
 </div>
 <div class="vs">{{result}}</div>

@@ -1,40 +1,29 @@
 angular.module('PokeTypes')
-.controller 'MainCtrl', ($scope) ->
+.controller 'MainCtrl', ($scope, Types) ->
    
-    types = [
-        {name: 'Fire'},
-        {name: 'Water'},
-        {name: 'Grass'}
-    ]
-
+    types = Types.list
     main = types[0]
     other = types[0]
-
-    comparator = (first, second) ->
-        first = first.name.toLowerCase()
-        second = second.name.toLowerCase()
         
-        if first is 'fire'
-            switch second
-                when 'fire' then 0
-                when 'water' then -1
-                when 'grass' then 1
+    comparator = (first, second) ->
+        firstName = first.getName().toLowerCase()
+        secondName = second.getName().toLowerCase()
+        
+        if firstName in second.getImmunity()
+            "#{first.getName()} won't affect #{second.getName()}"
 
-        else if first is 'water'
-            switch second
-                when 'fire' then 1
-                when 'water' then 0
-                when 'grass' then -1
+        else if secondName in first.getEffective()
+            "#{first.getName()} is effective towards #{second.getName()}"
 
-        else if first is 'grass'
-            switch second
-                when 'fire' then -1
-                when 'water' then 1
-                when 'grass' then 0
+        else if firstName in second.getResistance()
+            "#{first.getName()} isnt effective towards #{second.getName()}"
+            
+        else
+            "#{first.getName()} damages normally #{second.getName()}"
 
     update = ->
         return unless main? and other?
-        $scope.result = "#{main.name} vs #{other.name} = #{comparator(main, other)}"
+        $scope.result = comparator(main, other)
 
     update()
 

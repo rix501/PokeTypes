@@ -1,3 +1,3 @@
 # PokeTypes
 
-A simple Angular.js project that compares effictiveness between two pokemon types.
+A simple Angular.js project that compares effectiveness between two pokemon types.

@@ -9,4 +9,3 @@ angular.module('PokeTypes')
     controller: ($scope, $element) ->
         $scope.select = (thing) ->
             $scope.model = thing
-

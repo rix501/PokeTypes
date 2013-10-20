@@ -5,8 +5,12 @@ angular.module('PokeTypes')
     $scope.main = $scope.types[0]
     $scope.other = $scope.types[0]
 
-    updateResult = ->
-        $scope.result = $scope.main.comparator($scope.other)
+    $scope.switch = ->
+        main = $scope.other
 
-    $scope.$watch 'main', updateResult
-    $scope.$watch 'other', updateResult
+        $scope.other = $scope.main
+        $scope.main = main
+
+    $scope.$watch '[main, other]', ->
+        $scope.result = $scope.main.comparator($scope.other)
+    , yes

@@ -1,22 +1,4 @@
-<div class="hero-unit">
-    <div ng-repeat="thing in types">
-        <input 
-            id="main-{{thing.name}}" 
-            type="radio" 
-            name="main" 
-            ng-model="$parent.main"
-            ng-value="thing" />
-        <label for="main-{{thing.name}}">{{thing.name}}</label>
-    </div>
-</div>
-<div class="hero-unit">
-    <div ng-repeat="thing in types">
-        <input 
-            id="other-{{thing.name}}" 
-            type="radio"             
-            ng-model="$parent.other"
-            ng-value="thing" />
-        <label for="other-{{thing.name}}">{{thing.name}}</label>
-    </div>
-</div>
+<div poke-types-grid types="types" model="main"></div>
+<div poke-types-grid types="types" model="other"></div>
 <div class="vs">{{result}}</div>
+<button ng-click="switch()">Switch</button>

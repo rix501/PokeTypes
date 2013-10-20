@@ -1,10 +1,9 @@
 <div class="types-grid hero-unit">
-    <div class="poke-type" ng-repeat="thing in types">
-        <div 
-            class="{{thing.name | lowercase}}" 
-            ng-class="{selected: thing == $parent.model}" 
-            ng-click="select(thing)">
+    <div 
+        ng-repeat="thing in types"
+        class="poke-type {{thing.name | lowercase}}"
+        ng-class="{selected: thing == $parent.model}"
+        ng-click="select(thing)">
             {{thing.name}}
-        </div>
     </div>
 </div>

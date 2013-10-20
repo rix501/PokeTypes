@@ -17,13 +17,13 @@ angular.module('PokeTypes')
                 "#{@name} won't affect #{other.name}"
 
             else if secondName in @effective
-                "#{@name} is effective towards #{other.name}"
+                "#{@name} is super-effective towards #{other.name}"
 
             else if firstName in other.resistance
-                "#{@name} isnt effective towards #{other.name}"
+                "#{@name} isn't effective towards #{other.name}"
                 
             else
-                "#{@name} damages #{other.name} normally"
+                "#{@name} is effective towards #{other.name}"
 
     Fire = angular.extend(angular.copy(Type), {
         name: 'Fire'

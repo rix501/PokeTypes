@@ -55,7 +55,7 @@ angular.module('PokeTypes')
         addType: (other) ->
             type = angular.copy(@)
 
-            type.name = "#{type.name} + #{other.name}"
+            type.name = [type.name, other.name]
 
             type.combineWeakness(other.weakness)
 
@@ -73,9 +73,8 @@ angular.module('PokeTypes')
 
         comparator: (other) ->
             firstName = @name.toLowerCase()
-            secondName = other.name.toLowerCase()
             
-            text = if firstName in other.immunity
+            if firstName in other.immunity
                 "won't affect"
 
             else if firstName in other.weakness
@@ -92,8 +91,6 @@ angular.module('PokeTypes')
                 
             else
                 "is effective towards"
-
-            "#{@name} (#{@value()}) #{text} #{other.name} (#{other.value()})"
 
     Fire = defaults({
         name: 'Fire'

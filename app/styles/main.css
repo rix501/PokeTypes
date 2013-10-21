@@ -59,3 +59,22 @@ body {
 .vs {
     margin-top: 20px;
 }
+
+.vs .normal{ color: #979660 }
+.vs .fire{ color: #E57700 }
+.vs .water{ color: #4979F4 }
+.vs .electric{ color: #F4C800 }
+.vs .grass{ color: #6AB320 }
+.vs .ice{ color: #7CCBCC }
+.vs .fighting{ color: #B73322 }
+.vs .poison{ color: #9F58A5 }
+.vs .ground{ color: #D9B431 }
+.vs .flying{ color: #9986DD }
+.vs .psychic{ color: #F43F72 }
+.vs .bug{ color: #9AA600 }
+.vs .rock{ color: #B09F44 }
+.vs .ghost{ color: #644F8D }
+.vs .dragon{ color: #5108FB }
+.vs .dark{ color: #5E493A }
+.vs .steel{ color: #A1A2C3 }
+.vs .fairy{ color: #DF80E8 }

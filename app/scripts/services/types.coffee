@@ -95,119 +95,119 @@ angular.module('PokeTypes')
 
             "#{@name} (#{@value()}) #{text} #{other.name} (#{other.value()})"
 
-    Fire = angular.extend(angular.copy(Type), {
+    Fire = defaults({
         name: 'Fire'
         weakness: ['ground', 'rock', 'water']
         resistance: ['bug', 'steel', 'fire', 'grass', 'ice', 'fairy']
-    })
+    }, Type)
 
-    Water = angular.extend(angular.copy(Type), {
+    Water = defaults({
         name: 'Water'
         weakness: ['electric', 'grass']
         resistance: ['steel', 'fire', 'water', 'ice']
-    })
+    }, Type)
 
-    Grass = angular.extend(angular.copy(Type), {
+    Grass = defaults({
         name: 'Grass'
         weakness: ['flying', 'poison', 'bug', 'fire', 'ice']
         resistance: ['ground', 'water', 'grass', 'electric']
-    })
+    }, Type)
 
-    Electric = angular.extend(angular.copy(Type), {
+    Electric = defaults({
         name: 'Electric'
         weakness: ['ground']
         resistance: ['flying', 'electric', 'steel']
-    })
+    }, Type)
 
-    Ground = angular.extend(angular.copy(Type), {
+    Ground = defaults({
         name: 'Ground'
         weakness: ['water', 'grass', 'ice']
         resistance: ['poison', 'rock']
         immunity: ['electric']
-    })
+    }, Type)
 
-    Dragon = angular.extend(angular.copy(Type), {
+    Dragon = defaults({
         name: 'Dragon'
         weakness: ['ice', 'dragon', 'fairy']
         resistance: ['fire', 'water', 'grass', 'electric']
-    })
+    }, Type)
 
-    Ghost = angular.extend(angular.copy(Type), {
+    Ghost = defaults({
         name: 'Ghost'
         weakness: ['ghost', 'dark']
         resistance: ['poison', 'bug']
         immunity: ['normal', 'fight']
-    })
+    }, Type)
 
-    Normal = angular.extend(angular.copy(Type), {
+    Normal = defaults({
         name: 'Normal'
         weakness: ['fight']
         immunity: ['ghost']
-    })
+    }, Type)
 
-    Ice = angular.extend(angular.copy(Type), {
+    Ice = defaults({
         name: 'Ice'
         weakness: ['fire', 'fighting', 'rock', 'steel']
         resistance: ['ice']
-    })
+    }, Type)
 
-    Fighting = angular.extend(angular.copy(Type), {
+    Fighting = defaults({
         name: 'Fighting'
         weakness: ['flying', 'psychic', 'fairy']
         resistance: ['bug', 'rock', 'dark']
-    })
+    }, Type)
 
-    Poison = angular.extend(angular.copy(Type), {
+    Poison = defaults({
         name: 'Poison'
         weakness: ['ground', 'psychic']
         resistance: ['grass', 'fighting', 'poison', 'bug', 'fairy']
-    })
+    }, Type)
 
-    Flying = angular.extend(angular.copy(Type), {
+    Flying = defaults({
         name: 'Flying'
         weakness: ['electric', 'ice', 'rock']
         resistance: ['grass', 'fighting', 'bug']
         immunity: ['ground']
-    })
+    }, Type)
 
-    Psychic = angular.extend(angular.copy(Type), {
+    Psychic = defaults({
         name: 'Psychic'
         weakness: ['bug', 'ghost', 'dark']
         resistance: ['fighting', 'psychic']
-    })
+    }, Type)
 
-    Bug = angular.extend(angular.copy(Type), {
+    Bug = defaults({
         name: 'Bug'
         weakness: ['fire', 'flying', 'rock']
         resistance: ['grass', 'fighting', 'ground']
-    })
+    }, Type)
 
-    Rock = angular.extend(angular.copy(Type), {
+    Rock = defaults({
         name: 'Rock'
         weakness: ['water', 'grass', 'fighting', 'ground', 'steel']
         resistance: ['normal', 'fire', 'poison', 'flying']
-    })
+    }, Type)
 
-    Dark = angular.extend(angular.copy(Type), {
+    Dark = defaults({
         name: 'Dark'
         weakness: ['fighting', 'bug', 'fairy']
         resistance: ['ghost', 'dark']
         immunity: ['psychic']
-    })
+    }, Type)
 
-    Steel = angular.extend(angular.copy(Type), {
+    Steel = defaults({
         name: 'Steel'
         weakness: ['fighting', 'fire', 'ground']
         resistance: ['normal', 'grass', 'ice', 'flying', 'psychic', 'bug', 'rock', 'dragon', 'steel', 'fairy']
         immunity: ['poison']
-    })
+    }, Type)
 
-    Fairy = angular.extend(angular.copy(Type), {
+    Fairy = defaults({
         name: 'Fairy'
         weakness: ['poison', 'steel']
         resistance: ['fighting', 'dark', 'bug']
         immunity: ['dragon']
-    })
+    }, Type)
 
     @list = [
         Fire,

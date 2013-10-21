@@ -1,4 +1,4 @@
 <div poke-types-grid types="types" model="main"></div>
 <div poke-types-grid types="types" model="other"></div>
 <div class="vs">{{result}}</div>
-<button ng-click="switch()">Switch</button>
+<button ng-show="other.length == 1" ng-click="switch()">Switch</button>

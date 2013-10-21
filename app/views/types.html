@@ -2,7 +2,7 @@
     <div 
         ng-repeat="thing in types"
         class="poke-type {{thing.name | lowercase}}"
-        ng-class="{selected: thing == $parent.model}"
+        ng-class="selected(thing)"
         ng-click="select(thing)">
             {{thing.name}}
     </div>

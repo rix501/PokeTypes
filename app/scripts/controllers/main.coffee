@@ -14,7 +14,9 @@ angular.module('PokeTypes')
     $scope.$watch '[main, other]', ->
         if $scope.other.length == 1
             $scope.result = $scope.main.comparator($scope.other[0])
+            $scope.otherValue = $scope.other[0].value()
         else
             type = $scope.other[0].addType($scope.other[1])
             $scope.result = $scope.main.comparator(type)
+            $scope.otherValue = type.value()
     , yes

@@ -1,0 +1,102 @@
+@import "compass";
+
+$normal: #979660;
+$fire: #E57700;
+$water: #4979F4;
+$electric: #F4C800;
+$grass: #6AB320;
+$ice: #7CCBCC;
+$fighting: #B73322;
+$poison: #9F58A5;
+$ground: #D9B431;
+$flying: #9986DD;
+$psychic: #F43F72;
+$bug: #9AA600;
+$rock: #B09F44;
+$ghost: #644F8D;
+$dragon: #5108FB;
+$dark: #5E493A;
+$steel: #A1A2C3;
+$fairy: #DF80E8;
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.hero-unit {
+    display: inline-block;
+    margin: 10px auto;
+    max-width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.hero-unit h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.poke-type {
+    @include box-sizing(border-box);
+    color: darken(#dfdfdf, 75%);
+    border-radius: 4px;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    margin: 4px;
+
+    &.normal{ background-color: $normal };
+    &.fire{ background-color: $fire };
+    &.water{ background-color: $water };
+    &.electric{ background-color: $electric };
+    &.grass{ background-color: $grass };
+    &.ice{ background-color: $ice };
+    &.fighting{ background-color: $fighting };
+    &.poison{ background-color: $poison };
+    &.ground{ background-color: $ground };
+    &.flying{ background-color: $flying };
+    &.psychic{ background-color: $psychic };
+    &.bug{ background-color: $bug };
+    &.rock{ background-color: $rock };
+    &.ghost{ background-color: $ghost };
+    &.dragon{ background-color: $dragon };
+    &.dark{ background-color: $dark };
+    &.steel{ background-color: $steel };
+    &.fairy{ background-color: $fairy };
+}
+
+.selected {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.vs {
+    margin-top: 20px;
+
+    .normal{ color: $normal }
+    .fire{ color: $fire }
+    .water{ color: $water }
+    .electric{ color: $electric }
+    .grass{ color: $grass }
+    .ice{ color: $ice }
+    .fighting{ color: $fighting }
+    .poison{ color: $poison }
+    .ground{ color: $ground }
+    .flying{ color: $flying }
+    .psychic{ color: $psychic }
+    .bug{ color: $bug }
+    .rock{ color: $rock }
+    .ghost{ color: $ghost }
+    .dragon{ color: $dragon }
+    .dark{ color: $dark }
+    .steel{ color: $steel }
+    .fairy{ color: $fairy }
+}

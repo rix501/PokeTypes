@@ -206,6 +206,8 @@ angular.module('PokeTypes')
         immunity: ['dragon']
     }, Type)
 
+    @type = Type
+
     @list = [
         Fire,
         Water,

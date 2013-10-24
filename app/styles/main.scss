@@ -14,7 +14,7 @@ $psychic: #F43F72;
 $bug: #9AA600;
 $rock: #B09F44;
 $ghost: #644F8D;
-$dragon: #5108FB;
+$dragon: #9262FF;
 $dark: #5E493A;
 $steel: #A1A2C3;
 $fairy: #DF80E8;
@@ -30,9 +30,6 @@ body {
     display: inline-block;
     margin: 10px auto;
     max-width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
     background-color: #eee;
     border-radius: 6px;
     padding: 20px;
@@ -52,6 +49,15 @@ body {
     width: 80px;
     text-align: center;
     margin: 4px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+
+    &.none { 
+        color: #dfdfdf; 
+        background-color: darken(#dfdfdf, 15%); 
+        text-decoration: none;
+    };
 
     &.normal{ background-color: $normal };
     &.fire{ background-color: $fire };
@@ -76,6 +82,15 @@ body {
 .selected {
     color: #fff;
     text-decoration: underline;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+}
+
+.arrow {
+    display: inline-block;
 }
 
 .vs {

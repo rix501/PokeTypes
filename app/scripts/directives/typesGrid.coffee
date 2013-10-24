@@ -1,28 +1,18 @@
 angular.module('PokeTypes')
-.directive 'pokeTypesGrid', () ->
+.directive 'pokeTypesGrid', ($document) ->
     replace: yes
     templateUrl: 'views/types.html'
     restrict: 'EA'
     scope: 
         types: '='
-        model: '='
-    controller: ($scope, $element) ->
+        show: '='
+        model: '='        
+    controller: ($scope, $element, $attrs) ->
         $scope.selected = (thing) ->
-            if (angular.isArray($scope.model) and thing in $scope.model) or thing is $scope.model
-                'selected'
-
+            'selected' if thing is $scope.model
+                
         $scope.select = (thing) ->
-            if angular.isArray($scope.model)
-                # @TODO: this leads to some weird UX, fix it
-                if $scope.model.length == 2
-                    if thing in $scope.model
-                        $scope.model.splice($scope.model.indexOf(thing), 1)
-                    else
-                        $scope.model.shift()
-                        $scope.model.push(thing)
-                        
-                else if thing not in $scope.model
-                    $scope.model.push(thing)
-
+            if $scope.model is thing and $attrs.allowEmpty?
+                $scope.model = null
             else
                 $scope.model = thing

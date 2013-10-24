@@ -1,5 +1,20 @@
-<div poke-types-grid types="types" model="main"></div>
-<div poke-types-grid types="types" model="other"></div>
+<h1>Pokétypes</h1>
+<div class="selector">
+    <div 
+        ng-click="picker('main')" 
+        ng-class="{selected: showMainPicker}"
+        class="poke-type {{main.name | lowercase}}">{{main.name}}</div>
+    &rarr;
+    <div 
+        ng-click="picker('other1')" 
+        ng-class="{selected: showOther1Picker}"
+        class="poke-type {{other[0].name | lowercase}}">{{other[0].name}}</div>
+    <div 
+        ng-click="picker('other2')" 
+        ng-class="{selected: showOther2Picker}"
+        class="poke-type {{otherClass}}">{{otherName}}</div>
+</div>
+
 <div class="vs">
     <span ng-class="main.name | lowercase">{{main.name}}</span>
     ({{main.value()}})
@@ -9,4 +24,21 @@
     <span ng-show="other.length == 2" ng-class="other[1].name | lowercase">{{other[1].name}}</span>
     ({{otherValue}})
 </div>
-<button ng-show="other.length == 1" ng-click="switch()">Switch</button>
+
+<button ng-show="other[0] && !other[1]" ng-click="switchTypes()">Switch</button>
+
+<div poke-types-grid 
+    types="types" 
+    show="showMainPicker" 
+    model="main"></div>
+<div
+    poke-types-grid 
+    types="types" 
+    show="showOther1Picker" 
+    model="other[0]"></div>
+<div 
+    poke-types-grid 
+    types="types" 
+    show="showOther2Picker" 
+    model="other[1]" 
+    allow-empty></div>
